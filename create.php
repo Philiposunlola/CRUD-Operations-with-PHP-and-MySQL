@@ -40,7 +40,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <div class="col-sm-3 d-grid">
-                        <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+                        <a class="btn btn-outline-primary" href="/CRUD Operations-with-PHP-and-MySQL/index.php" role="button">Cancel</a>
                     </div>
                 </div>
 
