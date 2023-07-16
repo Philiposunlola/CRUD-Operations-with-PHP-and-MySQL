@@ -5,7 +5,7 @@ $phone = "";
 $address = "";
 
 $errorMessage = "";
-$successMessage = "";
+$successMessage = ""; 
 
 if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -47,8 +47,16 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
     <body>
         <div class="container my-5">
             <h2>New Client</h2>
+
+            <?php
+            if (!empty($errorMessage)) {
+                
+            }
+
+
+            ?>
             <form method="POST">
-                <div class="col-mb-3">
+                <div class="row-mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
