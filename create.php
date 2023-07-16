@@ -15,6 +15,15 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
            $errorMessage = "All the fields are required";
            break;
         }
+
+        // add new clients to database
+
+        $name = "";
+        $email = "";
+        $phone = "";
+        $address = "";
+
+        $successMessage = "Client added correctly";
     } while (false);
            
 }
