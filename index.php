@@ -39,6 +39,19 @@
                         die("Connection failed " . $conn->connect_error);
                     }
 
+                    // read all row from database table
+                    $sql = "SELECT * from clients";
+                    $result = $conn->query($sql);
+
+                    if (!$result) {
+                        die("invalid query: " . $conn->error);
+                    }
+
+                    // read data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        # code...
+                    }
+
                     ?>
                     <tr>
                         <td>10</td>
