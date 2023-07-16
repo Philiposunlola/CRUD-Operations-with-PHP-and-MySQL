@@ -49,22 +49,24 @@
 
                     // read data of each row
                     while ($row = $result->fetch_assoc()) {
-                        # code...
+                        echo "
+                        <tr>
+                            <td>$row[id]</td>
+                            <td>$row[name]</td>
+                            <td>$row[email]</td>
+                            <td>$row[phone]</td>
+                            <td>$row[address]</td>
+                            <td>$row[created_at]</td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="CRUD Operations-with-PHP-and-MySQL/edit.php?">Edit</a>
+                                <a class="btn btn-danger btn-sm" href="CRUD Operations-with-PHP-and-MySQL/delete.php?">Delete</a>
+                            </td>
+                        </tr>
+                        ";
                     }
 
                     ?>
-                    <tr>
-                        <td>10</td>
-                        <td>Bill Gate</td>
-                        <td>bill.gates@microsoft.com</td>
-                        <td>+123456789</td>
-                        <td>New York, USA</td>
-                        <td>18/05/2022</td>
-                        <td>
-                            <a class="btn btn-primary btn-sm" href="CRUD Operations-with-PHP-and-MySQL/edit.php">Edit</a>
-                            <a class="btn btn-danger btn-sm" href="CRUD Operations-with-PHP-and-MySQL/delete.php">Delete</a>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
