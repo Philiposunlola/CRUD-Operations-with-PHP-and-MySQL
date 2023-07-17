@@ -50,7 +50,12 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
 
             <?php
             if (!empty($errorMessage)) {
-                
+                echo "
+                <div class='alert alert-warning alert-dismissible fade show' role='alert' >
+                    <strong>$errorMessage</strong>
+                    <button type='button' class='btn-'></button>
+                </div>
+                "; 
             }
 
 
