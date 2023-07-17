@@ -53,7 +53,7 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
                 echo "
                 <div class='alert alert-warning alert-dismissible fade show' role='alert' >
                     <strong>$errorMessage</strong>
-                    <button type='button' class='btn-'></button>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
                 </div>
                 "; 
             }
@@ -67,24 +67,45 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
                         <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
                     </div>
                 </div>
+
                 <div class="col-mb-3">
                     <label class="col-sm-3 col-form-label">Email</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
                     </div>
                 </div>
-         ;       <div class="col-mb-3">
+
+                <div class="col-mb-3">
                     <label class="col-sm-3 col-form-label">Phone</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="name" value="<?php echo $phone; ?>">
                     </div>
                 </div>
+
                 <div class="col-mb-3">
                     <label class="col-sm-3 col-form-label">Address</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="name" value="<?php echo $Address; ?>">
                     </div>
                 </div>
+
+                <?php
+                    if (!empty($successMessage)) {
+                        echo "
+                        <div class='row mb-3'>
+                            <div class='offset-sm-3 col-sm-6'>
+                                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                    <strong>$successMessage</strong>
+                                    <button type='button' class='data-bs-dismiss='alert' aria-label='close'></button>
+                                </div>
+                            </div>
+
+                        </div>
+                        "; 
+                    }
+
+                ?>
+
                 <div class="rol-mb-3">
                     <div class="offset-sm-3 col-sm-3 d-grid">
                         <button type="submit" class="btn btn-primary">Submit</button>
