@@ -33,8 +33,6 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,9 +55,8 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
                 </div>
                 "; 
             }
-
-
             ?>
+            
             <form method="POST">
                 <div class="row-mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
