@@ -1,4 +1,12 @@
 <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "myshop";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $database);
+
     $name = "";
     $email ="";
     $phone = "";
@@ -20,6 +28,14 @@
             }
 
             // add new clients to database
+            $sql = "SELECT * from clients (name, email, phone, address)" . 
+                    "VALUES ('$name', '$email', '$phone', '$address')";
+            $result = $conn->query($sql);
+
+            if (!$result) {
+                $errorMessage = "Invalid query: " . $conn->error;
+                break;
+            }
 
             $name = "";
             $email = "";
@@ -27,7 +43,9 @@
             $address = "";
 
             $successMessage = "Client added correctly";
-            break;
+
+            header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
+            exit;
 
         } while (false);
             
@@ -99,7 +117,6 @@
                                     <button type='button' class='data-bs-dismiss='alert' aria-label='close'></button>
                                 </div>
                             </div>
-
                         </div>
                         "; 
                     }
