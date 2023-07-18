@@ -103,7 +103,6 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
                         </div>
                         "; 
                     }
-
                 ?>
 
                 <div class="rol-mb-3">
