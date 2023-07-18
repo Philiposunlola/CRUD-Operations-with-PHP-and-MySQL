@@ -28,7 +28,7 @@
             }
 
             // add new clients to database
-            $sql = "SELECT * from clients (name, email, phone, address)" . 
+            $sql = "INSERT INTO clients (name, email, phone, address) " . 
                     "VALUES ('$name', '$email', '$phone', '$address')";
             $result = $conn->query($sql);
 
@@ -48,9 +48,7 @@
             exit;
 
         } while (false);
-            
     }
-
 ?>
 
 <!DOCTYPE html>
