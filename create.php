@@ -7,11 +7,11 @@
     $errorMessage = "";
     $successMessage = ""; 
 
-    if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $address = $_POST['address'];
+    if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $address = $_POST["address"];
 
         do {
             if (empty($name) || empty($email) || empty($phone) || empty($address)) {
@@ -41,7 +41,8 @@
         <meta http-equiv="X-UA Compatible" content="IE-edge">
         <meta name="viewpoint" content="width-device-width", initial-scale-1.0>
         <title>My Shop</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <div class="container my-5">
@@ -83,7 +84,7 @@
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Address</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="address" value="<?php echo $Address; ?>">
+                        <input type="text" class="form-control" name="address" value="<?php echo $address; ?>">
                     </div>
                 </div>
 
@@ -103,7 +104,7 @@
                     }
                 ?>
 
-                <div class="rol mb-3">
+                <div class="row mb-3">
                     <div class="offset-sm-3 col-sm-3 d-grid">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
@@ -111,7 +112,6 @@
                         <a class="btn btn-outline-primary" href="/CRUD Operations-with-PHP-and-MySQL/index.php" role="button">Cancel</a>
                     </div>
                 </div>
-
             </form>
         </div>
     </body>
