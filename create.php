@@ -1,35 +1,36 @@
 <?php
-$name = "";
-$email ="";
-$phone = "";
-$address = "";
+    $name = "";
+    $email ="";
+    $phone = "";
+    $address = "";
 
-$errorMessage = "";
-$successMessage = ""; 
+    $errorMessage = "";
+    $successMessage = ""; 
 
-if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
+    if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
 
-    do{
-        if (empty($name) || empty($email) || empty($phone) || empty($address)) {
-           $errorMessage = "All the fields are required";
-           break;
-        }
+        do {
+            if (empty($name) || empty($email) || empty($phone) || empty($address)) {
+            $errorMessage = "All the fields are required";
+            break;
+            }
 
-        // add new clients to database
+            // add new clients to database
 
-        $name = "";
-        $email = "";
-        $phone = "";
-        $address = "";
+            $name = "";
+            $email = "";
+            $phone = "";
+            $address = "";
 
-        $successMessage = "Client added correctly";
-    } while (false);
-           
-}
+            $successMessage = "Client added correctly";
+
+        } while (false);
+            
+    }
 
 ?>
 
@@ -37,7 +38,7 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X UA Compatible" content="IE-edge">
+        <meta http-equiv="X-UA Compatible" content="IE-edge">
         <meta name="viewpoint" content="width-device-width", initial-scale-1.0>
         <title>My Shop</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -47,42 +48,42 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
             <h2>New Client</h2>
 
             <?php
-            if (!empty($errorMessage)) {
-                echo "
-                <div class='alert alert-warning alert-dismissible fade show' role='alert' >
-                    <strong>$errorMessage</strong>
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
-                </div>
-                "; 
-            }
+                if (!empty($errorMessage)) {
+                    echo "
+                    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                        <strong>$errorMessage</strong>
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
+                    </div>
+                    "; 
+                }
             ?>
-            
+
             <form method="POST">
-                <div class="row-mb-3">
+                <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
                     </div>
                 </div>
 
-                <div class="col-mb-3">
+                <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Email</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
                     </div>
                 </div>
 
-                <div class="col-mb-3">
+                <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Phone</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name" value="<?php echo $phone; ?>">
+                        <input type="text" class="form-control" name="phone" value="<?php echo $phone; ?>">
                     </div>
                 </div>
 
-                <div class="col-mb-3">
+                <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Address</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name" value="<?php echo $Address; ?>">
+                        <input type="text" class="form-control" name="address" value="<?php echo $Address; ?>">
                     </div>
                 </div>
 
@@ -102,7 +103,7 @@ if ($_SERVER['$REQUEST_METHOD'] == 'POST') {
                     }
                 ?>
 
-                <div class="rol-mb-3">
+                <div class="rol mb-3">
                     <div class="offset-sm-3 col-sm-3 d-grid">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
