@@ -35,6 +35,11 @@
             header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
             exit;
         }
+
+        $name = $row["name"];
+        $email = $row["email"];
+        $phone = $row["phone"];
+        $address = $row["address"];
     }
     else {
         // POST Method: update the data of the client
