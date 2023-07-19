@@ -1,3 +1,47 @@
+<?php
+    $servername = "";
+    $username = "";
+    $password = "";
+    $database = "";
+
+    // create cconnection
+    $conn = new mysqli($servername, $username, $password, $database);
+
+    $id = "";
+    $name = "";
+    $email = "";
+    $phone = "";
+    $address = "";
+
+    $errorMessage = "";
+    $successMessage = "";
+
+    if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
+        // GET meethod: Show the data of the class_implements
+
+        if ( !isset($_GET["id"]) ) {
+            header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
+            exit;
+        }
+
+        $id = $_GET["id"];
+
+        // read the row of the selected clients from database table
+        $sql = "SELECT * FROM clients WHERR id=$id";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+
+        if (!$row) {
+            header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
+            exit;
+        }
+    }
+    else {
+        // POST Method: update the data of the client
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,6 +68,7 @@
             ?>
 
             <form method="POST">
+                <input type="hidden" value="<?php echo $id; ?>">
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
                     <div class="col-sm-6">
