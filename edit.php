@@ -27,7 +27,7 @@
         $id = $_GET["id"];
 
         // read the row of the selected clients from database table
-        $sql = "SELECT * FROM clients WHERR id=$id";
+        $sql = "SELECT * FROM clients WHERE id=$id";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
 
@@ -68,7 +68,7 @@
             }
 
             $successMessage = "client updated correctly";
-
+ 
             header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
             exit;
 
@@ -151,7 +151,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <div class="col-sm-3 d-grid">
-                        <a class="btn btn-outline-primary" href="/CRUD Operations-with-PHP-and-MySQL/index.php" role="button">Cancel</a>
+                        <a class="btn btn-outline-primary" href=" /CRUD Operations-with-PHP-and-MySQL/index.php" role="button">Cancel</a>
                     </div>
                 </div>
             </form>
