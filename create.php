@@ -111,8 +111,8 @@
                         <div class='row mb-3'>
                             <div class='offset-sm-3 col-sm-6'>
                                 <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                                    <strong>$successMessage</strong>
-                                    <button type='button' class='data-bs-dismiss='alert' aria-label='close'></button>
+                                    <strong>$successMessage</strong>  
+                                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
                                 </div>
                             </div>
                         </div>

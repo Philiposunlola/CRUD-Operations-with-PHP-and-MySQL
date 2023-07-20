@@ -1,8 +1,8 @@
 <?php
-    $servername = "";
-    $username = "";
+    $servername = "localhost";
+    $username = "root";
     $password = "";
-    $database = "";
+    $database = "myshop";
 
     // create cconnection
     $conn = new mysqli($servername, $username, $password, $database);
@@ -101,7 +101,7 @@
                 }
             ?>
 
-            <form method="POST">
+            <form method="post">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="row mb-3">
                     <label class="col-sm-3 col-form-label">Name</label>
