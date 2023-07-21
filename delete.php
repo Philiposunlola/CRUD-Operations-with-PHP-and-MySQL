@@ -14,7 +14,7 @@
         $conn->query($sql);
     }
 
-    header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
+    header("location: /Myshop/index.php");
     exit;
 
 ?>

@@ -44,7 +44,7 @@
 
             $successMessage = "Client added correctly";
 
-            header("location: /CRUD Operations-with-PHP-and-MySQL/index.php");
+            header("location: /Myshop/index.php");
             exit;
 
         } while (false);
@@ -125,7 +125,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     <div class="col-sm-3 d-grid">
-                        <a class="btn btn-outline-primary" href="/CRUD Operations-with-PHP-and-MySQL/index.php" role="button">Cancel</a>
+                        <a class="btn btn-outline-primary" href=" /Myshop/index.php" role="button">Cancel</a>
                     </div>
                 </div>
             </form>
