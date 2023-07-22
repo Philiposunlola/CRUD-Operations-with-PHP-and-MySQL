@@ -10,7 +10,7 @@
     <body>
         <div class="container my-5">
             <h2>List of Clients</h2>
-            <a class="btn btn-primary" href="/CRUD Operations-with-PHP-and-MySQL/create.php" role="button">New Client</a>
+            <a class="btn btn-primary" href="/Myshop/create.php" role="button">New Client</a>
             <br>
             <table class="table">
                 <thead>
@@ -58,8 +58,8 @@
                                 <td>$row[address]</td>
                                 <td>$row[created_at]</td>
                                 <td>
-                                    <a class='btn btn-primary btn-sm' href=' /edit.php?id=$row[id]'>Edit</a>
-                                    <a class='btn btn-danger btn-sm' href=' /delete.php?id=$row[id]'>Delete</a>
+                                    <a class='btn btn-primary btn-sm' href='../Myshop/edit.php?id=$row[id]'>Edit</a>
+                                    <a class='btn btn-danger btn-sm' href='../Myshop/delete.php?id=$row[id]'>Delete</a>
                                 </td>
                             </tr>
                             ";

@@ -67,7 +67,7 @@
                 break;
             }
 
-            $successMessage = "client updated correctly";
+            $successMessage = "Client updated correctly";
  
             header("location: /Myshop/index.php");
             exit;
