@@ -27,6 +27,15 @@
             break;
             }
 
+            $emailValidate = "SELECT * FROM Clients WHERE email='" . $email . "'";
+            $emailValidateResult = $conn->query($emailValidate);
+
+            if ($emailValidateResult->num_rows > 0 ) {
+                $errorMessage = "Email already exist";
+                break;
+            }
+
+
             // add new clients to database
             $sql = "INSERT INTO clients (name, email, phone, address) " . 
                     "VALUES ('$name', '$email', '$phone', '$address')";
@@ -36,8 +45,6 @@
                 $errorMessage = "Invalid query: " . $conn->error;
                 break;
             }
-
-            $emailValidate = "SELECT * FROM Clients WHERE email=" . $email . "  ";
 
             $name = "";
             $email = "";
