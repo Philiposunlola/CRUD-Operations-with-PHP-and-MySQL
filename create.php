@@ -37,7 +37,7 @@
                 break;
             }
 
-            
+            $emailValidate = "SELECT * FROM Clients WHERE email=" . $email . "  ";
 
             $name = "";
             $email = "";
