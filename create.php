@@ -27,6 +27,7 @@
             break;
             }
 
+            // Email validation
             $emailValidate = "SELECT * FROM Clients WHERE email='" . $email . "'";
             $emailValidateResult = $conn->query($emailValidate);
 
