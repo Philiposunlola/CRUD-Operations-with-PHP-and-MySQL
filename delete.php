@@ -12,6 +12,8 @@
 
         $sql = "DELETE FROM clients WHERE id=$id";
         $conn->query($sql);
+
+        
     }
 
     header("location: /Myshop/index.php");
