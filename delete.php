@@ -18,3 +18,14 @@
     exit;
 
 ?>
+
+<?php
+    if(isset($_SESSION['id']) && $_SESSION['id'] !='') {
+        echo $_SESSION['id'];
+        unset($_SESSION['id']);
+        
+        <script>
+            swal("Hello world!");
+        </script>
+   } 
+?>
