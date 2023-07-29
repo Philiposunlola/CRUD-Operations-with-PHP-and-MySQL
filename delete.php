@@ -20,12 +20,18 @@
 ?>
 
 <?php
-    if(isset($_SESSION['id']) && $_SESSION['id'] !='') {
-        echo $_SESSION['id'];
+        if(isset($_SESSION['id']) && $_SESSION['id'] !='') 
+        {
+        ?>
+            <script>
+                swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+            });
+            </script>
+        <?php
         unset($_SESSION['id']);
-        
-        <script>
-            swal("Hello world!");
-        </script>
-   } 
+       } 
+    
 ?>
