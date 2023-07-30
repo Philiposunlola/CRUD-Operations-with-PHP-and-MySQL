@@ -69,6 +69,5 @@
                 </tbody>
             </table>
         </div>
-        <script src="sweetalert.js"></script>
     </body>
 </html>
