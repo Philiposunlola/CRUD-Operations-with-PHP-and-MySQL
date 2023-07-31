@@ -6,7 +6,9 @@
         <meta name="viewpoint" content="width-device-width", initial-scale-1.0>
         <title>My Store</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
     </head>
     <body>
         <div class="container my-5">
@@ -60,7 +62,7 @@
                                 <td>$row[created_at]</td>
                                 <td>
                                     <a class='btn btn-primary btn-sm' href='../Myshop/edit.php?id=$row[id]'>Edit</a>
-                                    <a class='btn btn-danger btn-sm' href='../Myshop/delete.php?id=$row[id]'>Delete</a>
+                                    <button class='btn btn-danger btn-sm' onclick='confirmDelete($row[id])'>Delete</button>
                                 </td>
                             </tr>
                             ";
@@ -69,5 +71,22 @@
                 </tbody>
             </table>
         </div>
+        <script>
+            function confirmDelete(id) {
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this client's data!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    // Perform the delete operation here (You need to implement this)
+                    // For example, you can redirect to the delete.php page with the ID
+                    window.location.href = `../Myshop/delete.php?id=${id}`;
+                }
+            });
+            }
+        </script>
     </body>
 </html>
