@@ -81,12 +81,15 @@
                 dangerMode: true,
             }).then((willDelete) => {
                 if (willDelete) {
-                    // Perform the delete operation here (You need to implement this)
-                    // For example, you can redirect to the delete.php page with the ID
-                    window.location.href = `../Myshop/delete.php?id=${id}`;
+                    swal("Poof! Your imaginary file has been deleted!", {
+                    icon: "success", 
+                    
+            });
+                } else {
+                    swal("Your imaginary file is safe!");
                 }
             });
-            }
+        }
         </script>
     </body>
 </html>
