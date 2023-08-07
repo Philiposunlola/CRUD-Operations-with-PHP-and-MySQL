@@ -88,6 +88,7 @@
                 } else {
                     swal("Your imaginary file is safe!");
                 }
+                window.location.href = `../Myshop/delete.php?id=${id}`;
             });
         }
         </script>
