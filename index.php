@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     <?php
-                        $servername = "localhost";
+                        $servername = "sql202.infinityfree.com";
                         $username = "if0_34940709";
                         $password = "B7z9pY1Oz9LgFkV";
                         $database = "if0_34940709_myshop";
