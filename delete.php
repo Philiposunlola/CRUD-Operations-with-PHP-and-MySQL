@@ -2,11 +2,11 @@
     if (isset($_GET["id"])  ) {
         $id = $_GET["id"];
 
-        $servername = "sql202.infinityfree.com";
-        $username = "if0_34940709";
-        $password = "B7z9pY1Oz9LgFkV";
-        $database = "if0_34940709_myshop";
-
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "test_db";
+   
         // create cconnection
         $conn = new mysqli($servername, $username, $password, $database);
 
